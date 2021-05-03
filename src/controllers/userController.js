@@ -1,4 +1,4 @@
-const User = require('../models/user');1
+const User = require('../models/user')
 const base = require('./baseController')
 const updateUser = require('./user/updateUser')
 

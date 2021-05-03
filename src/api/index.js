@@ -15,6 +15,9 @@ module.exports = async (app) => {
     const authRoutes = require('./routes/authorization')
     app.use(`${v1}/authorization`, authRoutes)
 
+    const utilizationRoutes = require('./routes/utilization')
+    app.use(`${v1}/utilization`, utilizationRoutes)
+
     app.use('*', (req, res, next) => {
         const err = new AppError(404, 'fail', 'Undefined route')
         next(err, req, res, next)
