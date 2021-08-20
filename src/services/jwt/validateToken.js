@@ -6,7 +6,7 @@ const config = require('./../../config/index')
 
 module.exports = async (token) => {
     try {
-        if (!token) return {state: false, message: "Token doesn't exists"}
+        if (!token) return {state: false, message: "Token doesn't exist"}
 
         const decode = await promisify(jwt.verify)(token, config.jwt.secret)
 

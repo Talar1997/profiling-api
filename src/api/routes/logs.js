@@ -14,6 +14,10 @@ router
     .get(logController.getAllLogs)
 
 router
+    .route('/number')
+    .get(logController.getNumberOfLogs)
+
+router
     .route('/:id')
     .get(logController.getOneLog)
 
