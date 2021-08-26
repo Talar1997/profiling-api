@@ -1,6 +1,41 @@
 const mongoose = require('mongoose')
 const utilizationSchema = new mongoose.Schema({
-  test: "Number"
+    cpu: {
+        cpus: {
+            type: Number,
+        },
+        usage:{
+            type: Number
+        }
+    },
+    memory: {
+        totalMemMb: {
+            type: Number,
+        },
+        usedMemMb: {
+            type: Number,
+        },
+        freeMemMb: {
+            type: Number,
+        },
+        usedMemPercentage: {
+            type: Number,
+        },
+        freeMemPercentage: {
+            type: Number,
+        },
+    },
+    os: {
+        platform: {
+            type: String,
+        },
+        uptime: {
+            type: Number
+        },
+        ip: {
+            type: String
+        }
+    }
 })
 
 const Utilization = mongoose.model('Utilization', utilizationSchema)
