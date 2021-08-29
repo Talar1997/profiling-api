@@ -11,7 +11,7 @@ module.exports = Model => async (req, res, next) => {
             return handleError(new AppError(status.NOT_FOUND, 'fail', 'No document found'), req, res, next)
         }
 
-        successResponse(res, status.OK, document)
+        successResponse(res, status.OK, document[0])
     } catch (error) {
         return handleError(error, req, res, next)
     }
