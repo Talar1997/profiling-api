@@ -18,7 +18,9 @@ module.exports = async (job, done) => {
             platform: os.platform(),
             uptimie: os.uptime(),
             ip: os.ip(),
-        }
+        },
+        isoDate: new Date(),
+        timestamp: Date.now()
     }
 
     await UtilizationModel.create(utilizationData)

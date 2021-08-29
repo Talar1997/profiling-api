@@ -11,7 +11,15 @@ router.use(authorization.restrictTo(roles.ADMIN, roles.USER))
 //Only for admin
 router
     .route('/')
-    .get(utilizationController.getLast24hourData)
+    .get(utilizationController.getAll)
+
+router
+    .route('/current')
+    .get(utilizationController.getCurrentData)
+
+// router
+//     .route('/lastDay')
+//     .get(utilizationController.getCurrentData)
 
 
 module.exports = router

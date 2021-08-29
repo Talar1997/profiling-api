@@ -35,7 +35,15 @@ const utilizationSchema = new mongoose.Schema({
         ip: {
             type: String
         }
-    }
+    },
+    isoDate: {
+        type: Date,
+        required: true,
+    },
+    timestamp: {
+        type: Number,
+        required: true,
+    },
 })
 
 const Utilization = mongoose.model('Utilization', utilizationSchema)
