@@ -17,9 +17,9 @@ router
     .route('/current')
     .get(utilizationController.getCurrentData)
 
-// router
-//     .route('/lastDay')
-//     .get(utilizationController.getCurrentData)
+router
+    .route('/lastDay')
+    .get(utilizationController.getLast24hourData)
 
 
 module.exports = router
