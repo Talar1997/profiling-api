@@ -8,6 +8,7 @@ module.exports = async (job, done) => {
     const memInfo = await osu.mem.info()
     const os = await osu.os
 
+    //TODO: gather netstat data
     const utilizationData = {
         cpu: {
             cpus: osu.cpu.count(),

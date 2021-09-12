@@ -16,7 +16,7 @@ module.exports = async (agenda) => {
 
     // Every 2 minutes
     agenda.define('saveUtilizationData', saveUtilizationData)
-    agenda.every('*/1 * * * *', 'saveUtilizationData')
+    agenda.every('*/5 * * * *', 'saveUtilizationData')
 
     agenda.start()
     logger.info(`Jobs has been defined and started`)
